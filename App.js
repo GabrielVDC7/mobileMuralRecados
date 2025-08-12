@@ -85,7 +85,7 @@ export default function App() {
         disabled={carregando}
       />
 
-      <Text style={styles.tituloMural}>📌 Mural Oficial</Text>
+      <Text style={styles.tituloMural}>Mural de Recados</Text>
       {muralOficial.length === 0 ? (
         <Text style={{ color: '#666' }}>Nenhum recado publicado ainda.</Text>
       ) : (
@@ -105,12 +105,65 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 20, flex: 1, backgroundColor: '#fff' },
-  label: { fontSize: 16, fontWeight: 'bold', marginTop: 10 },
-  input: { borderWidth: 1, borderColor: '#ccc', padding: 10, marginTop: 5, borderRadius: 5 },
-  textArea: { height: 100, textAlignVertical: 'top' },
-  tituloMural: { fontSize: 18, fontWeight: 'bold', marginTop: 20, marginBottom: 10 },
-  card: { backgroundColor: '#f5f5f5', padding: 10, borderRadius: 5, marginBottom: 10 },
-  autor: { fontWeight: 'bold' },
-  msg: { marginTop: 5 },
+  container: {
+    flex: 1,
+    backgroundColor: '#b9e4ff', // azul claro Wii
+    padding: 20,
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginTop: 10,
+    color: '#044b7f',
+  },
+  input: {
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    borderWidth: 1,
+    borderColor: 'rgba(200,200,200,0.4)',
+    padding: 12,
+    marginTop: 5,
+    borderRadius: 12,
+    fontSize: 15,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  textArea: {
+    height: 100,
+    textAlignVertical: 'top',
+  },
+  tituloMural: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginTop: 20,
+    marginBottom: 10,
+    textAlign: 'center',
+    color: '#044b7f',
+    textShadowColor: 'rgba(106,198,255,0.7)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
+  },
+  card: {
+    backgroundColor: 'rgba(255,255,255,0.85)',
+    borderRadius: 16,
+    padding: 15,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(200,200,200,0.3)',
+    shadowColor: '#000',
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 3,
+  },
+  autor: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#1e90ff',
+    marginBottom: 4,
+  },
+  msg: {
+    fontSize: 14,
+    color: '#333',
+  },
 });
